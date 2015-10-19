@@ -25,6 +25,8 @@ case action
     # no -=1
     # list.complete(no)
     TaskControl.setcomplete(item)
+    when "uncomplete"
+    TaskControl.uncomplete(item)
 end
 
 

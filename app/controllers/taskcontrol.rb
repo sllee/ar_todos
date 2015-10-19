@@ -28,7 +28,7 @@ class TaskControl
 
 	def self.setcomplete(id)
 		a = Task.all
-		byebug
+		# byebug
 		a[id.to_i-1].status = "Yes"
 		a[id.to_i-1].save
 
@@ -40,6 +40,12 @@ class TaskControl
 		 a.delete(a[id.to_i-1])
 
 		puts " "
+	end
+
+	def self.uncomplete(id)
+		a = Task.all
+		a[id.to_i-1].status = "No"
+		a[id.to_i-1].save
 	end
 
 

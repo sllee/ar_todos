@@ -7,6 +7,7 @@ class CreateTable <ActiveRecord::Migration
   	create_table :tasks do |t|
   		t.string :taskname
   		t.string :status
+  		t.belongs_to :deadline
   	end
   end
 end
